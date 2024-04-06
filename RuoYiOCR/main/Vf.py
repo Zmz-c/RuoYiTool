@@ -1,8 +1,7 @@
 import ddddocr
 
-from RuoYiOCR.getCapImg import decode_base64_to_img
-from RuoYiOCR.getRuoYiCap import get_captcha
-from RuoYiOCR.getUsername import getUsername
+from RuoYiOCR.Intruder.getCapImg import decode_base64_to_img
+from RuoYiOCR.Intruder.getRuoYiCap import get_captcha
 
 global result, getCaptcha
 global uuid

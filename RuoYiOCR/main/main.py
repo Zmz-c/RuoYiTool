@@ -1,5 +1,5 @@
-from RuoYiOCR.getPassword import getPassword
-from RuoYiOCR.getUsername import getUsername
+from RuoYiOCR.Intruder.getPassword import getPassword
+from RuoYiOCR.Intruder.getUsername import getUsername
 from RuoYiOCR.main.PostDate import PostDate
 
 # 该版本为第一个实验版本
