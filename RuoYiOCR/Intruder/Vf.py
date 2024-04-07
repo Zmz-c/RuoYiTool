@@ -12,7 +12,7 @@ def verification():
 
     ocr = ddddocr.DdddOcr()
 
-    with open('image.jpg', 'rb') as f:
+    with open('../main/image.jpg', 'rb') as f:
         img_bytes = f.read()
     res = ocr.classification(img_bytes)
     text = res[:3]

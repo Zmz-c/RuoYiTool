@@ -1,7 +1,7 @@
 from RuoYiOCR.Intruder.getCapImg import decode_base64_to_img
 from RuoYiOCR.Intruder.getRuoYiCap import get_captcha
-from RuoYiOCR.main.Vf import verification
-from RuoYiOCR.main.json_data import json_data
+from RuoYiOCR.Intruder.Vf import verification
+from RuoYiOCR.Intruder.json_data import json_data
 
 
 def PostDate(username, password):
