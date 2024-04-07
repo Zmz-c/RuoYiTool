@@ -3,14 +3,13 @@ import ddddocr
 from RuoYiOCR.Intruder.getCapImg import decode_base64_to_img
 from RuoYiOCR.Intruder.getRuoYiCap import get_captcha
 
-global result, getCaptcha
-global uuid
+global result, getCaptcha, uuid
 
 
 def verification():
     # 验证码识别
-    global result, getCaptcha
-    global uuid
+    global result, getCaptcha, uuid
+
     ocr = ddddocr.DdddOcr()
 
     with open('image.jpg', 'rb') as f:
@@ -48,6 +47,7 @@ def verification():
         getCaptcha = get_captcha('http://127.0.0.1/dev-api/captchaImage').json()
         decode_base64_to_img(getCaptcha['img'])
         verification()
+
     data = {
         "code": result,
         "uuid": getCaptcha['uuid']
