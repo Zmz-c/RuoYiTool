@@ -40,16 +40,19 @@ def verification():
             except ValueError:
                 result = False
     else:
-        getCaptcha = get_captcha('http://127.0.0.1/dev-api/captchaImage').json()
-        decode_base64_to_img(getCaptcha['img'])
-        verification()
+        restGetCaptcha()
     if not result:
-        getCaptcha = get_captcha('http://127.0.0.1/dev-api/captchaImage').json()
-        decode_base64_to_img(getCaptcha['img'])
-        verification()
+        restGetCaptcha()
 
     data = {
         "code": result,
         "uuid": getCaptcha['uuid']
     }
     return data
+
+
+def restGetCaptcha():
+    global getCaptcha
+    getCaptcha = get_captcha('http://127.0.0.1/dev-api/captchaImage').json()
+    decode_base64_to_img(getCaptcha['img'])
+    verification()
